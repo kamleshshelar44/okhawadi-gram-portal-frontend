@@ -1,0 +1,28 @@
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+
+const Culture = () => {
+  const { t } = useTranslation();
+
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
+      <div className="container mx-auto px-4">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+            संस्कृती आणि परंपरा
+          </h1>
+          <div className="prose max-w-none text-gray-700 dark:text-gray-300">
+            <p className="lead">
+              ओखवडीची समृद्ध सांस्कृतिक वारसा...
+            </p>
+            <p>
+              या भागात लवकरच अधिक माहिती उपलब्ध केली जाईल.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Culture;
