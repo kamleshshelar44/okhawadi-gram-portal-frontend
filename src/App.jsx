@@ -33,7 +33,7 @@ import Videos from './pages/Videos';
 import Statistics from './pages/Statistics';
 import VillageMap from './pages/VillageMap';
 import ContactUs from './pages/ContactUs';
-import Contact from './pages/contact';
+import Contact from './pages/Contact';
 
 // Admin Pages
 import AdminLogin from './pages/admin/AdminLogin';
