@@ -96,9 +96,14 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xl">ओ</span>
+            <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center">
+              <img
+                src="https://cdnbbsr.s3waas.gov.in/s37cac11e2f46ed46c339ec3d569853759/uploads/2024/12/20241210263012744.jpg"
+                alt="Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
+
             <div>
               <h1 className="text-xl font-bold text-gray-900 dark:text-white">
                 ओखवडी ग्रामपंचायत
@@ -109,13 +114,13 @@ const Header = () => {
             </div>
           </Link>
 
+
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
             <Link
               to="/"
-              className={`font-medium transition-colors ${
-                isPathActive('/') ? 'text-primary-600 dark:text-primary-400' : 'text-gray-900 dark:text-white hover:text-primary-600'
-              }`}
+              className={`font-medium transition-colors ${isPathActive('/') ? 'text-primary-600 dark:text-primary-400' : 'text-gray-900 dark:text-white hover:text-primary-600'
+                }`}
             >
               {t('navigation.home')}
             </Link>
@@ -130,11 +135,10 @@ const Header = () => {
                     <Link
                       key={subitem.path}
                       to={subitem.path}
-                      className={`block px-4 py-2 text-sm ${
-                        isPathActive(subitem.path)
+                      className={`block px-4 py-2 text-sm ${isPathActive(subitem.path)
                           ? 'bg-primary-50 text-primary-600 dark:bg-primary-900 dark:text-primary-300'
                           : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
-                      }`}
+                        }`}
                     >
                       {subitem.label}
                     </Link>
@@ -161,11 +165,10 @@ const Header = () => {
                     <button
                       key={lang.code}
                       onClick={() => changeLanguage(lang.code)}
-                      className={`block w-full text-left px-4 py-2 text-sm ${
-                        i18n.language === lang.code
+                      className={`block w-full text-left px-4 py-2 text-sm ${i18n.language === lang.code
                           ? 'bg-primary-50 text-primary-600 dark:bg-primary-900 dark:text-primary-300'
                           : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
-                      }`}
+                        }`}
                     >
                       <span className="mr-2">{lang.flag}</span>
                       {lang.name}
@@ -200,9 +203,8 @@ const Header = () => {
           <nav className="container mx-auto px-4 py-4">
             <Link
               to="/"
-              className={`block py-2 font-medium ${
-                isPathActive('/') ? 'text-primary-600 dark:text-primary-400' : 'text-gray-900 dark:text-white'
-              }`}
+              className={`block py-2 font-medium ${isPathActive('/') ? 'text-primary-600 dark:text-primary-400' : 'text-gray-900 dark:text-white'
+                }`}
               onClick={() => setIsMenuOpen(false)}
             >
               {t('navigation.home')}
@@ -216,11 +218,10 @@ const Header = () => {
                     <Link
                       key={subitem.path}
                       to={subitem.path}
-                      className={`block py-1 text-sm ${
-                        isPathActive(subitem.path)
+                      className={`block py-1 text-sm ${isPathActive(subitem.path)
                           ? 'text-primary-600 dark:text-primary-400'
                           : 'text-gray-700 dark:text-gray-300'
-                      }`}
+                        }`}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {subitem.label}
@@ -237,11 +238,10 @@ const Header = () => {
                   <button
                     key={lang.code}
                     onClick={() => changeLanguage(lang.code)}
-                    className={`px-2 py-1 text-sm rounded ${
-                      i18n.language === lang.code
+                    className={`px-2 py-1 text-sm rounded ${i18n.language === lang.code
                         ? 'bg-primary-100 text-primary-600 dark:bg-primary-900 dark:text-primary-300'
                         : 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
-                    }`}
+                      }`}
                   >
                     {lang.flag}
                   </button>
