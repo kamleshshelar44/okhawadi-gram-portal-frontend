@@ -80,8 +80,8 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center space-x-4">
-              <span>📧 grampanchayat@okhawadi.in</span>
-              <span>📱 +91 98765 43210</span>
+              <span>महाराष्ट्र शासन</span>
+              <span>| Government of Maharashtra</span>
             </div>
             <div className="flex items-center space-x-4">
               <span>{new Date().toLocaleDateString(i18n.language)}</span>

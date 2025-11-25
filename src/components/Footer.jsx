@@ -32,9 +32,13 @@ const Footer = () => {
           {/* About Section */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">ओ</span>
-              </div>
+              <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center">
+              <img
+                src="https://cdnbbsr.s3waas.gov.in/s37cac11e2f46ed46c339ec3d569853759/uploads/2024/12/20241210263012744.jpg"
+                alt="Logo"
+                className="w-full h-full object-cover"
+              />
+            </div>
               <div>
                 <h3 className="font-bold text-lg">ओखवडी ग्रामपंचायत</h3>
                 <p className="text-sm text-gray-400">Okhawadi Gram Panchayat</p>
