@@ -2,12 +2,12 @@ import React from "react";
 
 const GovLogoSlider = () => {
   const logos = [
-    "https://data.gov.in/sites/default/files/data_gov_in_0.png",
-    "https://www.makeinindia.com/sites/default/files/2019-05/logo-black.png",
-    "https://www.incredibleindia.org/content/dam/incredible-india/images/brand_logo/incredible-india-logo-colour.png",
-    "https://www.india.gov.in/sites/upload_files/npi/files/logo_1.png",
-    "https://digitalindia.gov.in/wp-content/themes/digitalindia/images/logo.png",
-    "https://www.pmindia.gov.in/wp-content/themes/pmindia/images/logo.png"
+    "https://cdnbbsr.s3waas.gov.in/s37cac11e2f46ed46c339ec3d569853759/uploads/bfi_thumb/2019032259-qxrqd6s3yg3mi3iv7lfo90cxk3ngn6puo0x8owzunc.png",
+    "https://cdnbbsr.s3waas.gov.in/s37cac11e2f46ed46c339ec3d569853759/uploads/bfi_thumb/2019032251-qxrqd6s3yg3mi3iv7lfo90cxk3ngn6puo0x8owzunc.png",
+    "https://cdnbbsr.s3waas.gov.in/s37cac11e2f46ed46c339ec3d569853759/uploads/bfi_thumb/2019052222-qxrqcz9efrtbx7tsfi6np298t0oixlvzyzpcupb014.png",
+    "https://cdnbbsr.s3waas.gov.in/s37cac11e2f46ed46c339ec3d569853759/uploads/bfi_thumb/2019052265-qxrqcz9efrtbx7tsfi6np298t0oixlvzyzpcupb014.png",
+    "https://cdnbbsr.s3waas.gov.in/s37cac11e2f46ed46c339ec3d569853759/uploads/bfi_thumb/2019032217-qxrqd6s3yg3mi3iv7lfo90cxk3ngn6puo0x8owzunc.png",
+    "https://cdnbbsr.s3waas.gov.in/s37cac11e2f46ed46c339ec3d569853759/uploads/bfi_thumb/2019041050-qxrqd22x09x6w1poz1ejejjml6amkp76zdntaj6tig.png"
   ];
 
   return (
