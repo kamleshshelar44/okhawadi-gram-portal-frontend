@@ -431,7 +431,7 @@ const Home = () => {
         </div>
       </section>
 
-       <section className="py-16 bg-[#e5e1dc]">
+       <section>
         <GovLogoSlider />
       </section>
     </div>
