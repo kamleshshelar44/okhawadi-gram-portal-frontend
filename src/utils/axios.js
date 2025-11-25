@@ -3,12 +3,9 @@ import axios from 'axios';
 const api = axios.create({
   baseURL: 'https://okhawadi-gram-portal-backend.vercel.app/api',
   timeout: 10000,
-  headers:{
-    'Content-Type': 'multipart/form-data',
-  }
 });
 
-// Request interceptor to add auth token and language parameter
+// Request interceptor
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('adminToken');
@@ -16,27 +13,29 @@ api.interceptors.request.use(
       config.headers.Authorization = `Bearer ${token}`;
     }
 
-    // Add language parameter to all requests
-    const language = localStorage.getItem('i18nextLng') || 'mr'; // Default to Marathi
-    if (config.method === 'get' && config.params) {
-      config.params.lang = language;
-    } else if (config.method === 'get') {
-      config.params = { lang: language };
+    // Only set multipart/form-data if FormData is used
+    if (config.data instanceof FormData) {
+      config.headers['Content-Type'] = 'multipart/form-data';
+    } else {
+      config.headers['Content-Type'] = 'application/json';
+    }
+
+    // Add language param
+    const language = localStorage.getItem('i18nextLng') || 'mr';
+    if (config.method === 'get') {
+      config.params = { ...(config.params || {}), lang: language };
     }
 
     return config;
   },
-  (error) => {
-    return Promise.reject(error);
-  }
+  (error) => Promise.reject(error)
 );
 
-// Response interceptor to handle errors
+// Response interceptor
 api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      // Token expired or invalid
       localStorage.removeItem('adminToken');
       localStorage.removeItem('adminInfo');
       window.location.href = '/admin/login';

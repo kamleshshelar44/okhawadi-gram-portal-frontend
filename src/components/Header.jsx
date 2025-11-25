@@ -76,7 +76,7 @@ const Header = () => {
   return (
     <header className="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50">
       {/* Top Bar */}
-      <div className="bg-primary-600 text-white py-2">
+      <div className="bg-[#e5e1dc] text-black py-2">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center space-x-4">

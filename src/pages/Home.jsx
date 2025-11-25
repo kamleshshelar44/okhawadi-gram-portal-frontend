@@ -405,24 +405,24 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary-600">
+      <section className="py-16 bg-[#e5e1dc]">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-3xl font-bold text-black mb-4">
             {t('home.villageNotice')}
           </h2>
-          <p className="text-primary-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-black mb-8 max-w-2xl mx-auto">
             {t('home.villageNoticeText')}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/complaints"
-              className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               {t('services.complaintsRequests')}
             </Link>
             <Link
               to="/contact"
-              className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors"
+              className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition-colors"
             >
               {t('home.contactUs')}
             </Link>
