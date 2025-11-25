@@ -34,7 +34,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Header */}
-      <div className="bg-primary-600 text-white py-16">
+      <div className="bg-[#e5e1dc] text-black py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">{t('navigation.about')}</h1>
           <p className="text-xl opacity-90">
