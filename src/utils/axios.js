@@ -3,6 +3,9 @@ import axios from 'axios';
 const api = axios.create({
   baseURL: 'https://okhawadi-gram-portal-backend.vercel.app/api',
   timeout: 10000,
+  headers:{
+    'Content-Type': 'multipart/form-data',
+  }
 });
 
 // Request interceptor to add auth token and language parameter
