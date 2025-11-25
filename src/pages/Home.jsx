@@ -244,7 +244,7 @@ const Home = () => {
     {/* Image */}
     <div className="flex justify-center mb-4">
       <img
-        src={`${import.meta.env.VITE_API_URL}${contact.image}` || "https://img.icons8.com/nolan/1200/user-default.jpg"}
+        src={`${contact.image}` || "https://img.icons8.com/nolan/1200/user-default.jpg"}
         alt={contact.name}
         className="w-40 h-40 rounded-full object-cover border-4 border-gray-200"
       />
