@@ -81,7 +81,7 @@ const Home = () => {
               {villageInfo.sliderImages.map((image) => (
                 <div key={image._id} className="relative h-[500px]">
                   <img
-                    src={`${import.meta.env.VITE_API_URL}${image.url}`}
+                    src={`${image.url}`}
                     alt={image.caption || t('home.villageName')}
                     className="w-full h-full object-cover z-0"
                   />

@@ -784,7 +784,7 @@ const AdminVillageInfo = () => {
                   <div key={image._id} className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden">
                     <div className="relative">
                       <img
-                        src={`${import.meta.env.VITE_API_URL}${image.url}`}
+                        src={`${image.url}`}
                         alt={image[`caption_${activeTab}`] || 'Slider image'}
                         className="w-full h-48 object-cover"
                       />
