@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 import { Calendar, MapPin, Users, BookOpen, Droplets, School, Award, Clock, ArrowRight, Phone, Mail, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import api from '../utils/axios';
+import GovLogoSlider from '../components/GovLogoSlider';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -428,6 +429,10 @@ const Home = () => {
             </Link>
           </div>
         </div>
+      </section>
+
+       <section className="py-16 bg-[#e5e1dc]">
+        <GovLogoSlider />
       </section>
     </div>
   );
