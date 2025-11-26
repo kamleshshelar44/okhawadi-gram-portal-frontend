@@ -4,6 +4,8 @@ import { ThemeProvider } from './context/ThemeContext';
 import { useTranslation } from 'react-i18next';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // Layouts
 import MainLayout from './layouts/MainLayout';

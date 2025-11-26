@@ -1,4 +1,5 @@
 import React from "react";
+import Slider from "react-slick";
 
 const GovLogoSlider = () => {
   const logos = [
@@ -10,38 +11,45 @@ const GovLogoSlider = () => {
     "https://cdnbbsr.s3waas.gov.in/s37cac11e2f46ed46c339ec3d569853759/uploads/bfi_thumb/2019041050-qxrqd22x09x6w1poz1ejejjml6amkp76zdntaj6tig.png",
   ];
 
-  const sliderLogos = [...logos, ...logos];
+  const settings = {
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 600,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 4 }
+      },
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 3 }
+      },
+      {
+        breakpoint: 480,
+        settings: { slidesToShow: 2 }
+      }
+    ]
+  };
 
   return (
-    <div className="w-full bg-white border-t border-gray-300 py-4 overflow-hidden">
-      <div className="flex items-center whitespace-nowrap animate-slide">
-        {sliderLogos.map((src, index) => (
-          <div
-            key={index}
-            className="px-4 flex items-center justify-center"
-          >
-            <img
-              src={src}
-              alt="Gov Logo"
-              className="h-10 sm:h-12 object-contain"
-            />
-          </div>
-        ))}
+    <div className="w-full bg-white py-6 border-t border-gray-300">
+      <div className="container mx-auto px-4">
+        <Slider {...settings}>
+          {logos.map((src, index) => (
+            <div key={index} className="flex items-center justify-center px-4">
+              <img
+                src={src}
+                className="h-12 md:h-16 object-contain mx-auto"
+                alt="Gov Logo"
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
-
-      <style>
-        {`
-          .animate-slide {
-            display: inline-flex;
-            animation: slide 30s linear infinite;
-          }
-
-          @keyframes slide {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-        `}
-      </style>
     </div>
   );
 };
