@@ -10,25 +10,30 @@ const GovLogoSlider = () => {
     "https://cdnbbsr.s3waas.gov.in/s37cac11e2f46ed46c339ec3d569853759/uploads/bfi_thumb/2019041050-qxrqd22x09x6w1poz1ejejjml6amkp76zdntaj6tig.png",
   ];
 
-  // Duplicate list for smooth infinite sliding
   const sliderLogos = [...logos, ...logos];
 
   return (
     <div className="w-full bg-white border-t border-gray-300 py-4 overflow-hidden">
       <div className="flex items-center whitespace-nowrap animate-slide">
         {sliderLogos.map((src, index) => (
-          <div key={index} className="px-6 flex items-center justify-center">
-            <img src={src} alt="Gov Logo" className="h-12 object-contain" />
+          <div
+            key={index}
+            className="px-4 flex items-center justify-center"
+          >
+            <img
+              src={src}
+              alt="Gov Logo"
+              className="h-10 sm:h-12 object-contain"
+            />
           </div>
         ))}
       </div>
 
-      {/* Animation Styles */}
       <style>
         {`
           .animate-slide {
             display: inline-flex;
-            animation: slide 25s linear infinite;
+            animation: slide 30s linear infinite;
           }
 
           @keyframes slide {
