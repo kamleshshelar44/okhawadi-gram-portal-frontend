@@ -14,7 +14,7 @@ api.interceptors.request.use(
     }
 
     // Only set multipart/form-data if FormData is used
-    if (config.data instanceof FormData) {
+    if (config.data instanceof FormData || config.url.includes('/gallery')) {
       config.headers['Content-Type'] = 'multipart/form-data';
     } else {
       config.headers['Content-Type'] = 'application/json';
